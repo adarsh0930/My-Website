@@ -1,6 +1,13 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 
+/**
+ * Displays an animated typewriter effect cycling through developer-related phrases.
+ *
+ * Renders a styled text block introducing the user with "I'm" followed by a looping typewriter animation that cycles through predefined phrases.
+ *
+ * @returns {JSX.Element} The rendered typewriter introduction component.
+ */
 export default function TypeWriter() {
   return (
     <div className="text-4xl font-bold h-20 flex items-center">

@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
 
+/**
+ * React hook for managing and persisting a dark or light theme preference.
+ *
+ * Initializes the theme based on localStorage, system preference, or defaults to "light" in non-browser environments. Synchronizes the theme with the root HTML element's class list and persists changes to localStorage.
+ *
+ * @returns {[string, function]} An array containing the current theme ("dark" or "light") and a setter function to update the theme.
+ */
 export default function useDarkMode() {
   
   const [theme, setTheme] = useState(() => {
