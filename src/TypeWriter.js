@@ -7,7 +7,7 @@ export default function TypeWriter() {
       I&apos;m{" "}
       <span className="text-purple-400 ml-2">
         <Typewriter
-          words={["a full-stack developer", "a Problem Solver", "a JavaScript Expert"]}
+          words={["a full-stack developer", "a problem solver", "a JavaScript expert"]}
           loop={0}
           cursor
           cursorStyle="|"
