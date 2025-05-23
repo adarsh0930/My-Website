@@ -118,7 +118,7 @@ const ProjectShowcase = () => {
             {projects[activeIndex].technologies.map((tech, idx) => (
               <span
                 key={idx}
-                className="px-2 sm:px-3 py-1 sm:py-1.5 bg-[#22262d] text-gray-800 dark:text-white flex items-center gap-2 rounded-full text-xs sm:text-[1rem] font-medium border border-[#303542]"
+                className="px-2 sm:px-3 py-1 sm:py-1.5 bg-[#22262d] text-white flex items-center gap-2 rounded-full text-xs sm:text-[1rem] font-medium border border-[#303542]"
               >
                 <img src={tech.logo} alt={tech.name + " logo"} className="w-4 h-4 sm:w-5 sm:h-5" />
                 {tech.name}

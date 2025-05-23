@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     name: 'Rock-Paper-Scissors Game',
-    tagline: 'A online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design.',
+    tagline: 'An interactive twist on the classic game, enhanced with modern web technologies.',
     description: 'An interactive web application that brings the classic "Rock-Paper-Scissors" game to life, featuring both frontend and backend components.',
     points: [
       'Engaging user interface with responsive design.',

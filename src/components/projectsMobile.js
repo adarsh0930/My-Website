@@ -49,15 +49,40 @@ function GutterCard({ project }) {
 }
 function DescriptionCard({ project }) {
   return (
-    <div className="bg-black bg-opacity-90 text-white rounded-2xl shadow-xl p-5 my-3 w-full pointer-events-auto">
+    <div className="bg-white dark:bg-black text-white rounded-2xl shadow-xl p-5 my-3 w-full pointer-events-auto transition-all duration-3000 ease-in-out">
       <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-3 sm:mb-5 bg-gradient-to-r ${project.gradient} bg-[length:200%_200%] animate-gradient-x bg-clip-text transition-all duration-2000 ease-in-out text-transparent`}>{project.name}</h2>
-      <p className="mb-3">{project.description}</p>
+      <p className="mb-3 text-gray-800 dark:text-white font-normal leading-snug">{project.description}</p>
       <ul className="mb-3 list-disc list-inside text-sm">
-        {project.points.map((pt, i) => (<li key={i}>{pt}</li>))}
+        {project.points.map((pt, i) => (
+          <li
+            key={i}
+            className="flex items-start text-xs sm:text-base text-gray-800 dark:text-white"
+            style={{ gap: "0.7em" }}
+          >
+            <span
+              className="mt-1"
+              style={{
+                color: project.accentColor,
+                fontSize: "1.2em",
+                lineHeight: "1",
+              }}
+            >
+              •
+            </span>
+            <span>{pt}</span>
+          </li>
+
+        ))}
       </ul>
-      <div className="flex flex-wrap gap-2">
-        {project.technologies.map((tech, i) => (
-          <span key={i} className="px-2 py-0.5 bg-gray-700 rounded text-xs">{tech.name}</span>
+      <div className="flex flex-wrap gap-2 sm:gap-3">
+        {project.technologies.map((tech, idx) => (
+          <span
+            key={idx}
+            className="px-2 sm:px-3 py-1 sm:py-1.5 bg-[#22262d] text-white flex items-center gap-2 rounded-full text-xs sm:text-[1rem] font-medium border border-[#303542]"
+          >
+            <img src={tech.logo} alt={tech.name + " logo"} className="w-4 h-4 sm:w-5 sm:h-5" />
+            {tech.name}
+          </span>
         ))}
       </div>
     </div>
